@@ -7,7 +7,7 @@ from modules import people
 from modules import company
 from modules import food
 
-@app.route('/paranuara/v1.0/company', methods=['GET'])
+@app.route('/paranuara/v1.0/company-employees', methods=['GET'])
 def get_employees():
 	company_name = request.args.get('name')
 	if company_name is None or len(company_name) == 0:

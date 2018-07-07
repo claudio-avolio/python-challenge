@@ -1,0 +1,61 @@
+{
+    "common_friends": [
+        {
+            "_id": "595eeb9b1e0d8942524c98ad",
+            "about": "Consectetur aute consectetur dolor aliquip dolor sit id. Sint consequat anim occaecat ad mollit aliquip ut aute eu culpa mollit qui proident eu. Consectetur ea et sit exercitation aliquip officia ea aute exercitation nulla qui sunt labore. Enim veniam labore do irure laborum aute exercitation consectetur. Voluptate adipisicing velit sunt consectetur id sint adipisicing elit elit pariatur officia amet officia et.\r\n",
+            "address": "492 Stockton Street, Lawrence, Guam, 4854",
+            "age": 60,
+            "balance": "$1,562.58",
+            "company_id": 98,
+            "email": "deckermckenzie@earthmark.com",
+            "eyeColor": "brown",
+            "favouriteFood": [
+                "cucumber",
+                "beetroot",
+                "carrot",
+                "celery"
+            ],
+            "friends": [
+                {
+                    "index": 0
+                },
+                {
+                    "index": 1
+                },
+                {
+                    "index": 2
+                }
+            ],
+            "gender": "male",
+            "greeting": "Hello, Decker Mckenzie! You have 2 unread messages.",
+            "guid": "b057bb65-e335-450e-b6d2-d4cc859ff6cc",
+            "has_died": false,
+            "index": 1,
+            "name": "Decker Mckenzie",
+            "phone": "+1 (893) 587-3311",
+            "picture": "http://placehold.it/32x32",
+            "registered": "2017-06-25T10:03:49 -10:00",
+            "tags": [
+                "veniam",
+                "irure",
+                "mollit",
+                "sunt",
+                "amet",
+                "fugiat",
+                "ex"
+            ]
+        }
+    ],
+    "person1": {
+        "address": "762 Tabor Court, Ola, Idaho, 4329",
+        "age": 24,
+        "name": "Grace Kelly",
+        "phone": "+1 (923) 600-2868"
+    },
+    "person2": {
+        "address": "455 Dictum Court, Nadine, Mississippi, 6499",
+        "age": 54,
+        "name": "Bonnie Bass",
+        "phone": "+1 (823) 428-3710"
+    }
+}

@@ -2,7 +2,7 @@
 
 This solution implements 3 APIS:
 
-1) http://<host>:<port>/paranuara/v1.0/company?name=CompanyName
+1) http://<host>:<port>/paranuara/v1.0/company-employees?name=CompanyName
 
 Returns a JSON list with all employees from the company specified by the parameter 'name'
 If the parameter 'name' is not provided, the API returns HTTP response code 400 (Bad Request)
@@ -11,7 +11,7 @@ If the company exists but it doesn't have any employee, the API returns an empty
 
 Example:
 
-http://<host>:<port>/paranuara/v1.0/company?name=lovepad
+http://<host>:<port>/paranuara/v1.0/company-employees?name=lovepad
 
 Note: the parameter 'name' is case insensitive
 
@@ -60,3 +60,64 @@ Returns a JSON object with the following format:
 
 If the parameter 'name' is not provided, the API returns HTTP response code 400 (Bad Request)
 If there is no person with name 'Name' in the file people.json, the API returns the HTTP response code 404 (Not Found)
+
+Downloading the code:
+
+1 - Go to an empty directory ($THE_DIR) clone the repository
+
+> git clone https://github.com/claudio-avolio/python-challenge
+
+2 - Go to the root application directory
+
+> cd python-challenge
+
+3 - Install Dependencies
+
+> pip install -r requirements.txt
+
+4 - Run the application
+
+> flask run
+
+THe server must start as in the following:
+
+ >flask run
+ * Serving Flask app "python-challenge.py"
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+The API url, based on the host and port above:
+
+http://127.0.0.1:5000/paranuara/v1.0/company-employees?name=CompanyName
+http://127.0.0.1:5000/paranuara/v1.0/people-info?person1Name=Name1&person2Name=Name2
+http://127.0.0.1:5000/paranuara/v1.0/person-info?name=Name
+
+******* Test executed using Postman *******
+
+http://127.0.0.1:5000/paranuara/v1.0/company-employees?name=lovepad
+
+Result - see file company-lovepad-employees.txt
+
+http://127.0.0.1:5000/paranuara/v1.0/people-info?person1Name=Grace Kelly&person2Name=Bonnie Bass
+
+Result - see file people-info-result.json
+
+http://127.0.0.1:5000/paranuara/v1.0/person-info?name=Bonnie Bass
+
+Result:
+
+{
+    "age": 54,
+    "fruits": [
+        "orange",
+        "banana",
+        "strawberry"
+    ],
+    "username": "Bonnie Bass",
+    "vegetables": [
+        "beetroot"
+    ]
+}
