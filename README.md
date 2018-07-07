@@ -1,5 +1,32 @@
 # python-challenge
 
+Known limitations:
+
+In a real world scenario of an API Approach solution (using Mulesoft naming convention) we would have two layers of APIs:
+
+1 - System APIs responsible for retrieving Person and Company resources in a (close to) pure RESTful way, for example:
+
+GET http://<host>:<port>/paranuara/v1.0/company (retrieve all companies)
+GET http://<host>:<port>/paranuara/v1.0/company/<index> (retrieve the company UNIQUELY identifed by the id <index>)
+GET http://<host>:<port>/paranuara/v1.0/company/<index>/employees (retrieve all the employes that work for the company UNIQUELY identifed by the id <index>)
+GET http://<host>:<port>/paranuara/v1.0/person (retrieve all persons from repository)
+GET http://<host>:<port>/paranuara/v1.0/person/<index> (retrieve the person UNIQUELY identifed by the id <index>)
+GET http://<host>:<port>/paranuara/v1.0/person/<index>/friends (retrieve all friends of the person UNIQUELY identifed by the id <index>)
+
+The APIs that return a collection can also accept query strings to return a subset of entities.
+
+2 - Process APIs responsible for fulfilling business requirements - they orchestrate System APIs calls and provide services to the upper layer...
+
+3 - Experience APIs, responsible to be the direct endpoint for applications that will consume the services.
+
+GET http://<host>:<port>/paranuara/v1.0/company-employees?name=CompanyName
+GET http://<host>:<port>/paranuara/v1.0/people-info?person1Name=Name1&person2Name=Name2
+GET http://<host>:<port>/paranuara/v1.0/person-info?name=Name
+
+For this challenge, in order to keep things simple, there is no separation for APIS layers. All APIs retrieve sata stright from the repository and enforce any rules specified in the requirements.
+
+** THE SOLUTION **
+
 This solution implements 3 APIS:
 
 1) http://<host>:<port>/paranuara/v1.0/company-employees?name=CompanyName
