@@ -143,15 +143,15 @@ http://127.0.0.1:5000/paranuara/v1.0/person-info?name=Bonnie Bass
 
 Result:
 
-{
-    "age": 54,
-    "fruits": [
-        "orange",
-        "banana",
-        "strawberry"
-    ],
-    "username": "Bonnie Bass",
-    "vegetables": [
-        "beetroot"
-    ]
-}
+{  
+	"age": 54,  
+	"fruits": [  
+		"orange",  
+		"banana",  
+		"strawberry"  
+	],  
+	"username": "Bonnie Bass",  
+	"vegetables": [  
+		"beetroot"  
+	]  
+}  
