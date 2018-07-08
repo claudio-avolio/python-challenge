@@ -1,6 +1,6 @@
-fruits = set(['banana', 'apple', 'strawberry', 'orange'])
+fruits = {'banana', 'apple', 'strawberry', 'orange'}
 
-vegetables = set(['cucumber', 'beetroot', 'celery', 'carrot'])
+vegetables = {'cucumber', 'beetroot', 'celery', 'carrot'}
 
 def is_fruit(name):
 	return name in fruits

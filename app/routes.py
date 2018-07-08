@@ -31,7 +31,7 @@ def get_people_info():
 	if person2 is None:
 		abort(404)
 	common_friends = people.get_common_friends(person1["index"], person2["index"])
-	filtered_friends = [friend for friend in common_friends if not friend["has_died"] and friend["eyeColor"].lower() == "brown"]
+	filtered_friends = people.get_people_with_filter(lambda p: not p["has_died"] and p["eyeColor"].lower() == "brown", common_friends)
 	return jsonify({ "person1" : { "name" : person1["name"], "age" : person1["age"], "address" : person1["address"], "phone" : person1["phone"] }, "person2" : { "name" : person2["name"], "age" : person2["age"], "address" : person2["address"], "phone" : person2["phone"] }, "common_friends" : filtered_friends })
 
 @app.route('/paranuara/v1.0/person-info', methods=['GET'])

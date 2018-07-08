@@ -2,6 +2,13 @@
 
 Known limitations:
 
+===
+
+The format of the Person record returned to the client has the same format of original stored in the file people.json; this means that the APIs return more data than necessary.
+In a real world scenario, the format of the output will follow a interface defined by the API specification, usually provinding only the information that is or might eventually be necessary.
+
+===
+
 In a real world scenario of an API Approach solution (using Mulesoft naming convention) we would have two layers of APIs:
 
 1 - System APIs responsible for retrieving Person and Company resources in a (close to) pure RESTful way, for example:

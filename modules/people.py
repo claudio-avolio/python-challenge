@@ -30,3 +30,9 @@ def get_common_friends(index1, index2):
 def get_people_from_company(index):
 	employees = [person for person in people if person["company_id"] == index]
 	return employees
+
+def get_people_with_filter(peopleFilter, listOfPeople):
+	if (not callable(peopleFilter)):
+		raise RuntimeError("Parameter peopleFilter must be a callable object")
+	filteredPeople = list(filter(peopleFilter, listOfPeople))
+	return filteredPeople
