@@ -13,12 +13,12 @@ In a real world scenario of an API Approach solution (using Mulesoft naming conv
 
 1 - System APIs responsible for retrieving Person and Company resources in a (close to) pure RESTful way, for example:
 
-GET http://<host>:<port>/paranuara/v1.0/company (retrieve all companies)
-GET http://<host>:<port>/paranuara/v1.0/company/<index> (retrieve the company UNIQUELY identifed by the id <index>)
-GET http://<host>:<port>/paranuara/v1.0/company/<index>/employees (retrieve all the employes that work for the company UNIQUELY identifed by the id <index>)
-GET http://<host>:<port>/paranuara/v1.0/person (retrieve all persons from repository)
-GET http://<host>:<port>/paranuara/v1.0/person/<index> (retrieve the person UNIQUELY identifed by the id <index>)
-GET http://<host>:<port>/paranuara/v1.0/person/<index>/friends (retrieve all friends of the person UNIQUELY identifed by the id <index>)
+GET http://<host>:<port>/paranuara/v1.0/company (retrieve all companies)  
+GET http://<host>:<port>/paranuara/v1.0/company/<index> (retrieve the company UNIQUELY identifed by the id <index>)  
+GET http://<host>:<port>/paranuara/v1.0/company/<index>/employees (retrieve all the employes that work for the company UNIQUELY identifed by the id <index>)  
+GET http://<host>:<port>/paranuara/v1.0/person (retrieve all persons from repository)  
+GET http://<host>:<port>/paranuara/v1.0/person/<index> (retrieve the person UNIQUELY identifed by the id <index>)  
+GET http://<host>:<port>/paranuara/v1.0/person/<index>/friends (retrieve all friends of the person UNIQUELY identifed by the id <index>)  
 
 The APIs that return a collection can also accept query strings to return a subset of entities.
 
@@ -26,9 +26,9 @@ The APIs that return a collection can also accept query strings to return a subs
 
 3 - Experience APIs, responsible to be the direct endpoint for applications that will consume the services.
 
-GET http://<host>:<port>/paranuara/v1.0/company-employees?name=CompanyName
-GET http://<host>:<port>/paranuara/v1.0/people-info?person1Name=Name1&person2Name=Name2
-GET http://<host>:<port>/paranuara/v1.0/person-info?name=Name
+GET http://<host>:<port>/paranuara/v1.0/company-employees?name=CompanyName  
+GET http://<host>:<port>/paranuara/v1.0/people-info?person1Name=Name1&person2Name=Name2  
+GET http://<host>:<port>/paranuara/v1.0/person-info?name=Name  
 
 For this challenge, in order to keep things simple, there is no separation for APIS layers. All APIs retrieve sata stright from the repository and enforce any rules specified in the requirements.
 
@@ -54,22 +54,22 @@ Note: the parameter 'name' is case insensitive
 Returns a JSON object with the following format:
 
 { 
-	person1 : {
-		name : ...,
-		age : ...,
-		address : ...,
-		phone : ...
-	},
-	person2 : {
-		name : ...,
-		age : ...,
-		address : ...,
-		phone : ...	
-	},
-	common_friends : [
-		list of common frieds still alive and with brown eyes
-	]
-}
+	person1 : {  
+		name : ...,  
+		age : ...,  
+		address : ...,  
+		phone : ...  
+	},  
+	person2 : {  
+		name : ...,  
+		age : ...,  
+		address : ...,  
+		phone : ...  
+	},  
+	common_friends : [  
+		list of common frieds still alive and with brown eyes  
+	]  
+}  
 
 If the parameter 'person1Name' or parameter 'person2Name' is not provided, the API returns HTTP response code 400 (Bad Request)
 If person1 or person2 does not exist in the file people.json, the API returns the HTTP response code 404 (Not Found)
@@ -82,15 +82,15 @@ Returns some information abour the person indicated by the parameter 'name' and 
 Returns a JSON object with the following format:
 
 { 
-	username : ...,
-	age : ...,
-	fruits : [
-		list of favorite fruits
-	],
-	vegetables : [
-		list of favorite vegetables
-	]	
-}
+	username : ...,  
+	age : ...,  
+	fruits : [  
+		list of favorite fruits  
+	],  
+	vegetables : [  
+		list of favorite vegetables  
+	]  
+}  
 
 If the parameter 'name' is not provided, the API returns HTTP response code 400 (Bad Request)
 If there is no person with name 'Name' in the file people.json, the API returns the HTTP response code 404 (Not Found)
